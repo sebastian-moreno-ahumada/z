@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Young+Serif&display=swap');
+
+body {
+    background-color:rgb(228, 249, 251);
+    font-family: 'Lilita One', sans-serif;
+    font-family: 'Young Serif', serif;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+/*Navbar styling*/
+nav ul.nav-bar {
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: rgb(169, 237, 246);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav ul.nav-bar li {
+    flex: 1 1 auto; 
+    list-style-type: none;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+nav ul.nav-bar li:hover a {
+    background-color: rgb(18, 116, 129);
+    border-color: white;
+}
+
+nav ul.nav-bar li a{
+    background-color: rgb(45, 192, 212);
+    border: 3px solid rgb(13, 13, 11);
+    border-radius: 20px;
+    color: white;
+    display: block; 
+    padding: 10px 5px; 
+}
+
+nav ul.nav-bar img {
+    width: 5%;
+    margin-right: 10%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*posts styling*/
+div#posts-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div#posts-container div.posts{
+    background-color: rgb(181, 234, 253);
+    border: 6px solid black;
+    border-radius: 20px;
+    padding: 1%;
+    margin: 1%;
+    width: 45%;
+}
+div#posts-container div.posts div.post-info{
+    text-align: right;
+}
+div#posts-container div.posts div.post-extras {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+div#posts-container div.posts div.likes {
+    display: flex;
+    flex-direction: row;
+}
+
+div#posts-container div.posts div.likes button {
+    margin-right: 10px; 
+    font-size: 16px;
+}
+
+div#posts-container div.posts p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/*post creation/editing styling*/
+div#new-post-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+div#new-post-container textarea{
+    margin: 10px;
+}
+div#new-post-container button#new-post-button{
+    width: 10%;
+    align-self: flex-end;
+}
+
+
+/*login form styling*/
+div#login-form{
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: rgb(181, 234, 253);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+}
+
+div#login-form input{
+    margin: 10px;
+}
+div#login-form button {
+    max-width: 15%;
+    margin: 10px;
+}
+
+/*register form styling*/
+div#register-form{
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: rgb(181, 234, 253);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+}
+
+div#register-form input{
+    margin: 10px;
+}
+div#register-form button {
+    max-width: 15%;
+    margin: 10px;
+}

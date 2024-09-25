@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/main.css" type="text/css")
+        script(src="/js/logout.js" defer)
+        script(src="/js/editpost.js" defer)
+        title Z: post
+    body
+        include navbar
+        h1 Edit your post!
+        div#new-post-container
+            label(for="new-post-content") What changes do you want to make?  
+            textarea#new-post-content(name="new-post-content", cols="80", rows="10")
+            button(id="new-post-button") Edit Post!

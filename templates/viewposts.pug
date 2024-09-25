@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/main.css" type="text/css")
+        script(src="/js/logout.js" defer)
+        script(src="/js/deletepost.js" defer)
+        script(src="/js/likepost.js" defer)
+        script(src="/js/postordering.js" defer)
+        script(src="/js/caneditpost.js" defer)
+        title Z: View Posts
+    body
+        include navbar
+        h1 What's the Community Saying? 
+        div#post-ordering-container
+            label(for="post-ordering") List posts by: 
+            select#post-ordering
+                if order === 'time'
+                    option(value="time" selected) Recents 
+                    option(value="likes") Most likes
+                else
+                    option(value="time") Recents 
+                    option(value="likes" selected) Most likes  
+        div#posts-container
+            for post in posts 
+                div(id=`post-${post.postID}` class="posts")
+                    p(id=`content-${post.postID}`) #{post.content}
+                    div.post-info  
+                        p - #{post.username}
+                        p #{post.timeReference}
+                    div.post-extras
+                        div.likes 
+                            button(id=`like-${post.postID}` onclick=`postLike(${post.postID})`) &#9829; : 
+                            p(id=`like-counter-${post.postID}`) #{post.likes}
+                        div.modifications 
+                            button(id=`edit-${post.postID}` onclick=`canEditPost(${post.postID}, ${post.posterID})`) Edit
+                            button(id=`delete-${post.postID}` onclick=`postDelete(${post.postID}, ${post.posterID})`) Delete
+        footer 
+            if tenBefore
+                a(href=`/?page=${page-1}&order=${order}`) Previous Page
+            if tenAfter 
+                a(href=`/?page=${page+1}&order=${order}`) Next Page

@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/main.css" type="text/css")
+        script(src="/js/register.js" defer)
+        script(src="/js/logout.js" defer)
+        title Z: Register 
+    body
+        include navbar
+        h1 Register!
+        div#register-form
+            div 
+                label(for="register-username") Username: 
+                input(type="text" id="register-username")
+            div 
+                label(for="register-username") Password: 
+                input(type="text" id="register-password")
+            button(id="register-button") Register
+            p Already have an account? 
+                a(href="http://localhost:4131/login") login!

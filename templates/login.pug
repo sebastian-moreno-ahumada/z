@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/main.css" type="text/css")
+        script(src="/js/login.js" defer)
+        script(src="/js/logout.js" defer)
+        title Z: login 
+    body
+        include navbar
+        h1 Login!
+        div#login-form
+          div 
+            label(for="login-username") Username: 
+            input(type="text" id="login-username")
+          div
+            label(for="login-password") Password: 
+            input(type="text" id="login-password")
+          button(id="login-button") Login
+          p Don't have an account? 
+            a(href="http://localhost:4131/register") Register!
